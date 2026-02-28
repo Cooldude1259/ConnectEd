@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+body {
+  background-color: black;
+}
+
 .uiverse-404 {
   --bg: #070a16;
   --text: #f2f4ff;
@@ -10,7 +14,7 @@
 
   position: relative;
   width: 100%;
-  max-width: 42rem;
+  height: 100%;
   margin: auto;
   padding: 4rem 1.5rem;
   display: grid;
