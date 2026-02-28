@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.uiverse-404 {
+  --bg: #070a16;
+  --text: #f2f4ff;
+  --muted: #aab1ff;
+  --accent: #7f8cff;
+  --accent2: #5ef1ff;
+  --glow: rgba(127, 140, 255, 0.6);
+
+  position: relative;
+  width: 100%;
+  max-width: 42rem;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 20%, #1a1f4d, transparent 45%),
+    radial-gradient(circle at 80% 80%, #0f3b5f, transparent 50%),
+    linear-gradient(180deg, #050814, var(--bg));
+  border-radius: 2rem;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+}
+
+.uiverse-404 .stars {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent),
+    radial-gradient(1px 1px at 70% 80%, #fff 50%, transparent),
+    radial-gradient(1px 1px at 40% 60%, #fff 50%, transparent);
+  opacity: 0.35;
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.uiverse-404 .card {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  padding: 3rem 2.6rem;
+  border-radius: 1.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 3rem 8rem rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  animation: float 7s ease-in-out infinite;
+  transition: transform 0.6s ease;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-0.8rem);
+  }
+}
+
+.uiverse-404 .card:hover {
+  transform: translateY(-1rem) scale(1.02);
+}
+
+.uiverse-404 .emoji {
+  position: absolute;
+  top: -1.4rem;
+  right: -1.4rem;
+  font-size: 2.6rem;
+  filter: drop-shadow(0 0 1rem var(--glow));
+  animation: emoji 4.5s ease-in-out infinite;
+}
+
+@keyframes emoji {
+  50% {
+    transform: translateY(-0.6rem) rotate(6deg);
+  }
+}
+
+.uiverse-404 .code {
+  font-size: 5.6rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  background: linear-gradient(90deg, #fff, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 2rem var(--glow));
+}
+
+.uiverse-404 .title {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.uiverse-404 .desc {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.uiverse-404 .loader {
+  margin: 2rem auto;
+  width: 7.5rem;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.uiverse-404 .loader span {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  animation: load 1.6s infinite ease-in-out;
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%,
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+.uiverse-404 .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.uiverse-404 .btn {
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.uiverse-404 .primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0.8rem 2.2rem var(--glow);
+}
+
+.uiverse-404 .primary:hover {
+  transform: translateY(-0.3rem) scale(1.07);
+}
+
+.uiverse-404 .ghost {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.uiverse-404 .ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.uiverse-404 .footer {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  opacity: 0.55;
+  text-align: center;
+}
